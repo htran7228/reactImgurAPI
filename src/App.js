@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Album from './components/Album/album';
+import Gallery from './components/Gallery/gallery';
+import Search from './components/searchbar/search';
+import Navs from './Navigation/Navs';
+import { HashRouter, Route, Switch } from "react-router-dom";
 import './App.css';
 
 class App extends Component {
+
+
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+     <HashRouter>
+     <div className="App">
+       <Navs/>
+       <Switch>
+       <Route exact path="/" component={Album}/>
+       <Route path="/gallery" component={Gallery}/>
+       <Route path="/search" component={Search}/>
+       </Switch>
+       </div>
+     </HashRouter>
+    
     );
   }
 }
