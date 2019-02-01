@@ -35,7 +35,7 @@ class Search extends Component {
                     headers: { 'authorization': 'Client-ID ' + this.state.client_id  }
                 }).then((response) => {
                     var x =JSON.parse(JSON.stringify(response.data.data));
-                    console.log(response);
+                    console.log(response.data.data);
                     let data = [...x];
                     this.setState({
                         search: data
@@ -63,8 +63,11 @@ class Search extends Component {
                             return (  
                                 <div className="searchContainer" key={key}>   
                                     <h3><a href={item.link}>{item.title}</a></h3>  
-                                    <img src={item.link} width="300" height="200" alt=""></img>                                                                              
-                          </div> 
+                                    <img src={item.link} width="300" height="200" alt=""></img> 
+                                    <li><p> Comment Count: {item.comment_count}</p> </li>
+                                     <li><p> Upvotes: {item.score}</p></li>
+                                     <li> <p> Downvotes: {item.downs}</p></li>                                                                                                 
+                                     </div> 
                              )
                          })}  
                     </div>        

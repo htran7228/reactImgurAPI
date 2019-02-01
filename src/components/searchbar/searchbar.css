@@ -40,14 +40,21 @@
      border: 1px solid skyblue;
      text-align: center;
      width: 670px;
-     height: 300px;
+     height: 40%;
      margin: 20px auto;
      padding-top: 30px;
      padding-left: 50px;
      padding-right: 50px;
      padding-bottom: 20px;
+     
     
   }
+
+  .searchContainer li {
+    list-style: none;
+    display: inline;
+  }
+
 
   .searchContainer:hover {
     
