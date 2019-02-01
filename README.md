@@ -28,11 +28,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Images from a user Album can be retrieved only if the client id is known. This is the url `https://api.imgur.com/3/album/{{albumHash}}/images` and the `albumhash` is the last letter/numbers of the user url address for ther album. The application will display all current images in the user's album and will update after the they upload another images. 
 
-![User Albums](/src/image/Condition2.png)
+![User Albums](/src/image/condition2.png)
 
 ## Gallery Trending Images
 
-![Gallery Trends](/src/image/Condition.png)
+![Gallery Trends](/src/image/condition.png)
 
 
 ## Gallery Search bar
