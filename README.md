@@ -28,6 +28,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Images from a user Album can be retrieved only if the client id is known. This is the url `https://api.imgur.com/3/album/{{albumHash}}/images` and the `albumhash` is the last letter/numbers of the user url address for ther album. The application will display all current images in the user's album and will update after the they upload another images. 
 
+![User Albums](/src/image/Condition2.png)
+
+## Gallery Trending Images
+
+![Gallery Trends](/src/image/Condition.png)
+
+
 ## Gallery Search bar
 
 The search bar used in the application to find specfic galleries on imgur makes use of the `https://api.imgur.com/3/gallery/search/{{sort}}/{{window}}/{{page}}?q=cats` url. The parameters such as `sort` and `page` are optional and are used to sort out the images. The `q` paramter is for search queries and can be changed for more advance searches. See the Imgur API documentation to read more about the different options.  
