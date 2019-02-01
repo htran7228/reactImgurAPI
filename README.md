@@ -46,4 +46,4 @@ The search bar used in the application to find specfic galleries on imgur makes 
     }
 
 ```
-*Not all images may display because some galleries links will have multiple images
+*Not all images may display because some galleries links will have multiple images. Must find the specfic property in the JSON object to access display all them. Otherwise it will not show up in the search or trending. 
