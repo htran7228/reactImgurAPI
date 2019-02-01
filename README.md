@@ -7,7 +7,27 @@ I picked Imgur because of it's large collection of images that are uploaded dail
 
 ### Axios
 
-Axios is used to perform HTTP request to the Imgur API.
+Axios is used to perform HTTP request to the Imgur API. This is the syntax I used to make the request. The `method` property can be set to  any of the HTTP request method such as POST or GET. The url will depend on the type of data that is trying to be accessed. The header requires a client id and a Imgur must be set up in order to obtain one. The API documentation for Imgur will provide step by step instruction on how to set that up and other important information(https://apidocs.imgur.com/). Once the request is successful it will return
+a JSON object and can be accessed via the `response` parameter. 
+
+```
+  axios({  
+        method: 'get',
+        url:  ,
+        headers: { 'authorization': 'Client-ID ' + this.state.client_id  }
+    }).then((response) => {
+            
+        })
+
+    }).catch((error) => {
+
+        console.log(error);
+      
+    });
+
+    }
+
+```
 
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
