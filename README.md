@@ -1,68 +1,58 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Imgur API
 
-In the project directory, you can run:
+  The purposes of this project is to understand Web APIs using React and Axios. I picked Imgur because of it's large collection of images that are uploaded daily by thousands of users. This serves as a guide for anybody interesting in using the API. The application currently display the user album, trending galleries, and a search bar that finds galleries based on what is entered. 
 
-### `npm start`
+### Axios
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  Axios is used to perform HTTP request to the Imgur API and can be installed via `npm install axios`. This is the syntax below used to make the request. The `method` property can be set to any of the HTTP request method such as `POST` or `GET`. The `url` will depend on the type of data that is to being accessed such as `https://api.imgur.com/3/album/{{albumHash}}/images` for Album images. The header requires a client id and a Imgur must be set up in order to obtain one. The API documentation for Imgur will provide step by step instruction on how to set that up and other important information(https://apidocs.imgur.com/). Once the request is successful it will return a JSON object and can be accessed via the `response` parameter. 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+```
+  axios({  
+        method: 'get',
+        url:  ,
+        headers: { 'authorization': 'Client-ID ' + this.state.client_id  }
+    }).then((response) => {        
+       })
+    }).catch((error) => {
+        console.log(error);      
+    });
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    }
 
-### `npm run build`
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Imgur Album
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Images from a user Album can be retrieved only if the client id is known. This is the url `https://api.imgur.com/3/album/{{albumHash}}/images` and the `albumhash` is the last letter/numbers of the user url address for ther album. The application will display all current images in the user's album and will update after the they upload another images. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![User Albums](/src/image/condition2.png)
 
-### `npm run eject`
+## Gallery Trending Images
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Gallery Trends](/src/image/condition.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Gallery Search bar
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The search bar used in the application to find specfic galleries on imgur makes use of the `https://api.imgur.com/3/gallery/search/{{sort}}/{{window}}/{{page}}?q=cats` url. The parameters such as `sort` and `page` are optional and are used to sort out the images. The `q` paramter is for search queries and can be changed for more advance searches. See the Imgur API documentation to read more about the different options.  
 
-## Learn More
+```
+  axios({  
+        method: 'get',
+        url: 'https://api.imgur.com/3/gallery/search/top/week/1?q_all=' + {{searchstring}}  ,
+        headers: { 'authorization': 'Client-ID ' + this.state.client_id  }
+    }).then((response) => {        
+       })
+    }).catch((error) => {
+       
+    });
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    }
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+![Search Bar](/src/image/Checkout.png)
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+*Not all images may display because some galleries links will have multiple images. Must find the specfic property in the JSON object to  display all them. Otherwise it will not show up in the search or trending. Works with those that have one images.
