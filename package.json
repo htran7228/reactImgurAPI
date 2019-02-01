@@ -1,7 +1,7 @@
 {
   "name": "restapi",
   "version": "0.1.0",
-  "homepage": "https://htran7228.github.io/React-ImgurAPI-Application/",
+  "homepage": "https://htran7228.github.io/reactImgurAPI/",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
