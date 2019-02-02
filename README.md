@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Axios
 
-  Axios is used to perform HTTP request to the Imgur API and can be installed via `npm install axios`. This is the syntax below used to make the request. The `method` property can be set to any of the HTTP request method such as `POST` or `GET`. The `url` will depend on the type of data that is to being accessed such as `https://api.imgur.com/3/album/{{albumHash}}/images` for Album images. The header requires a client id and a Imgur must be set up in order to obtain one. The API documentation for Imgur will provide step by step instruction on how to set that up and other important information(https://apidocs.imgur.com/). Once the request is successful it will return a JSON object and can be accessed via the `response` parameter. 
+  Axios is used to perform HTTP request to the Imgur API and can be installed via `npm install axios`. This is the syntax below used to make the request. The `method` property can be set to any of the HTTP request method such as `POST` or `GET`. The `url` will depend on the type of data that is to being accessed such as `https://api.imgur.com/3/album/{{albumHash}}/images` for Album images. The header requires a client id and a Imgur account must be set up in order to obtain one. The API documentation for Imgur will provide step by step instruction on how to set that up and other important information(https://apidocs.imgur.com/). Once the request is successful it will return a JSON object and can be accessed via the `response` parameter. 
 
 
 ```
