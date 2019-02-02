@@ -11,9 +11,8 @@ class Gallery extends Component {
         prevInfo: [], //In case comparsion is ever needed. Not currently in use.
         section: "top",
         sort: "top",
-        window: ""
-
-        
+        window: "" //intial state
+    
    };
 
     requestGalleryAPI = () => {
@@ -43,28 +42,37 @@ class Gallery extends Component {
     });
 
     }
- 
-    componentDidMount() {  //call API once page is rendered
 
-        this.requestGalleryAPI();
-
-    }
 
 /*
-   shouldComponentUpdate(nextState) {
 
-        return this.state.information !== nextState.information
-
-    }
-
-      componentDidUpdate() { //updates 
+      componentDidUpdate() { //called after component is rendered
    
-        setTimeout(this.requestGalleryAPI ,1000);
+      
            
     }
 
 */
-  
+
+    componentDidMount() {  
+    //call API once page is rendered where the window property will be empty in its intial state. Component will update afterwards
+    //when selecting a sort option
+    console.log("Hello");
+    console.log(this.state.window);
+    this.requestGalleryAPI();
+
+   }
+    
+
+    shouldComponentUpdate(nextProps,nextState) { 
+     
+        console.log(nextState.window);
+        return this.state.window !== nextState.window;
+
+    }
+
+
+    
   
 
     render() {
