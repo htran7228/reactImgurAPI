@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Album from './components/Album/album';
 import Gallery from './components/Gallery/gallery';
 import Search from './components/searchbar/search';
-import Navs from './Navigation/Navs';
+import Navs from './components/Navigation/Navs';
 import { HashRouter, Route, Switch } from "react-router-dom";
 import './App.css';
 

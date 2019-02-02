@@ -1,14 +1,10 @@
 import React from 'react';
+import Navlink from './navlink';
 import './navi.css';
-import Aux from '../Axc/Axu.js';
-import { NavLink } from "react-router-dom";
 
+const navbar = () => {
 
-const navs = () => {
-
-
-        return (
-        <Aux >
+    return (     
         <div className="nav">
             <div className="nav-header">
             <div className="nav-title">
@@ -23,16 +19,12 @@ const navs = () => {
           </label>
         </div>
           <input type="checkbox" id="nav-check"></input>  
-          <div className="nav-links">
-          <NavLink to="/search">Search Gallery</NavLink>
-            <NavLink to="/gallery">Gallery</NavLink> 
-            <NavLink to="/">Album</NavLink>
-          </div>
+          <Navlink/>
       </div>
-      </Aux >
-     );
+    )
 
 
 }
 
-export default navs;
+
+export default navbar;
