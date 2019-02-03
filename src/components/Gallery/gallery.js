@@ -6,7 +6,7 @@ import '../componentstyle.css';
 class Gallery extends Component {
 
     state = {
-        client_id: 'c83aab06ee186e7',
+        client_id: process.env.REACT_APP_IMGUR_CLIENT_ID,
         information: [], 
         prevInfo: [], //In case comparsion is ever needed. Not currently in use.
         section: "top",
