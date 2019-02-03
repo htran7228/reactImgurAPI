@@ -1,15 +1,15 @@
 {
-  "main.css": "/reactImgurAPI/static/css/main.a48c65f9.chunk.css",
-  "main.js": "/reactImgurAPI/static/js/main.a85b61ea.chunk.js",
-  "main.js.map": "/reactImgurAPI/static/js/main.a85b61ea.chunk.js.map",
+  "main.css": "/reactImgurAPI/static/css/main.1d18ebf7.chunk.css",
+  "main.js": "/reactImgurAPI/static/js/main.3a896fe8.chunk.js",
+  "main.js.map": "/reactImgurAPI/static/js/main.3a896fe8.chunk.js.map",
   "static/js/1.95e846df.chunk.js": "/reactImgurAPI/static/js/1.95e846df.chunk.js",
   "static/js/1.95e846df.chunk.js.map": "/reactImgurAPI/static/js/1.95e846df.chunk.js.map",
   "runtime~main.js": "/reactImgurAPI/static/js/runtime~main.ad74c3e2.js",
   "runtime~main.js.map": "/reactImgurAPI/static/js/runtime~main.ad74c3e2.js.map",
-  "static/css/main.a48c65f9.chunk.css.map": "/reactImgurAPI/static/css/main.a48c65f9.chunk.css.map",
+  "static/css/main.1d18ebf7.chunk.css.map": "/reactImgurAPI/static/css/main.1d18ebf7.chunk.css.map",
   "static/media/componentstyle.css": "/reactImgurAPI/static/media/blocks.248753de.jpg",
   "static/media/App.css": "/reactImgurAPI/static/media/blue.26818901.jpg",
   "index.html": "/reactImgurAPI/index.html",
-  "precache-manifest.d8c845769a1fe229b47ba11cc502aeef.js": "/reactImgurAPI/precache-manifest.d8c845769a1fe229b47ba11cc502aeef.js",
+  "precache-manifest.9903f840ae50b05436f72af44dc4a54e.js": "/reactImgurAPI/precache-manifest.9903f840ae50b05436f72af44dc4a54e.js",
   "service-worker.js": "/reactImgurAPI/service-worker.js"
 }
