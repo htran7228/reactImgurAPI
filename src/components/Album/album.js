@@ -6,7 +6,7 @@ class Request extends Component {
 
 
 state = {
-            client_id: 'c83aab06ee186e7',
+            client_id: process.env.REACT_APP_IMGUR_CLIENT_ID,
             album_id: 'V5Qiy29',
             information: [], 
             prevInfo: []

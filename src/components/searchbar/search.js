@@ -8,7 +8,7 @@ import './searchbar.css';
 class Search extends Component {
 
         state = {
-            client_id: 'c83aab06ee186e7',
+            client_id: process.env.REACT_APP_IMGUR_CLIENT_ID,
             searchString: "",
             search: []
 
